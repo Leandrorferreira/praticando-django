@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block content %}
+<table>
+    <thead>
+        <tr>
+            <td>Titulo</td>
+            <td>Local</td>
+            <td>Horário</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for role in roles %}
+        <tr>
+            <td>{{ role.titulo }}</td>
+            <td>{{ role.local }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
